@@ -1,4 +1,5 @@
 const lombaJsonUrl = "data/lomba.json";
+const testimonialJsonUrl = "data/testimoni.json";
 const faqJsonUrl = "data/faq.json";
 const partnerJsonUrl = "data/partner.json";
 
@@ -32,6 +33,37 @@ fetch(lombaJsonUrl)
       });
    })
    .catch((err) => console.error("Gagal load data lomba:", err));
+
+// Testimonial
+fetch(testimonialJsonUrl)
+   .then((response) => response.json())
+   .then((data) => {
+      const testimonialRow = document.querySelector("#testimoni .row.g-5");
+      testimonialRow.innerHTML = "";
+
+      data.forEach((item, index) => {
+         const col = document.createElement("div");
+         col.className = "col-lg-6";
+         col.setAttribute("data-aos", "fade-up");
+         col.setAttribute("data-aos-delay", (index + 1) * 100);
+
+         col.innerHTML = `
+            <div class="testimonial-item">
+               <img src="${item.image}" class="testimonial-img" alt="${item.name}">
+               <h3>${item.name}</h3>
+               <h4>${item.role}</h4>
+               <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>${item.text}</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+               </p>
+            </div>
+         `;
+
+         testimonialRow.appendChild(col);
+      });
+   })
+   .catch((error) => console.error("Gagal memuat testimonials.json:", error));
 
 // FAQ
 fetch(faqJsonUrl)
