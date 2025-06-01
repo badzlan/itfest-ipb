@@ -1,0 +1,23 @@
+[
+   {
+      "id": "features-tab-1",
+      "title": "Capture The Flag",
+      "description": "Kompetisi keamanan siber berbasis jeopardy-style yang menguji kemampuan peserta dalam menyelesaikan tantangan teknis dunia nyata.",
+      "list": ["Web Exploitation, PWN, Digital Forensics, dan Cryptography.", "Format soal jeopardy-style yang menantang logika dan teknik.", "Final diselenggarakan secara luring di Sekolah Vokasi IPB University."],
+      "image": "img/lomba/ctf.png"
+   },
+   {
+      "id": "features-tab-2",
+      "title": "Software Development",
+      "description": "Kompetisi ini menantang peserta untuk mengembangkan aplikasi inovatif berbasis kecerdasan buatan sesuai tema “AI for a Smarter Future”.",
+      "list": ["Mengembangkan solusi berbasis Artificial Intelligence.", "Fokus pada inovasi digital yang bermanfaat untuk masa depan.", "Dikerjakan secara tim oleh mahasiswa aktif."],
+      "image": "img/lomba/softdev.png"
+   },
+   {
+      "id": "features-tab-3",
+      "title": "Digital Poster",
+      "description": "Kompetisi desain visual yang bertujuan menggali kreativitas peserta dalam mengangkat isu teknologi AI secara informatif dan menarik.",
+      "list": ["Membuat poster bertema AI untuk bidang Pertanian, Pendidikan, atau Kesehatan.", "Menilai kreativitas, relevansi, dan pesan yang disampaikan.", "Format pengumpulan digital, mudah dan fleksibel."],
+      "image": "img/lomba/poster.png"
+   }
+]

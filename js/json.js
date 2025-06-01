@@ -1,5 +1,38 @@
+const lombaJsonUrl = "data/lomba.json";
 const faqJsonUrl = "data/faq.json";
 
+// Bidang Perlombaan
+fetch(lombaJsonUrl)
+   .then((res) => res.json())
+   .then((data) => {
+      const tabContent = document.querySelector(".tab-content");
+      tabContent.innerHTML = ""; // Kosongkan dulu
+
+      data.forEach((item, index) => {
+         const isActive = index === 0 ? "active show" : "";
+         const listItems = item.list.map((text) => `<li><i class="bi bi-check2-all"></i> <span>${text}</span></li>`).join("");
+
+         const html = `
+            <div class="tab-pane fade ${isActive}" id="${item.id}">
+               <div class="row">
+                  <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+                  <h3>${item.title}</h3>
+                  <p class="fst-italic">${item.description}</p>
+                  <ul>${listItems}</ul>
+                  </div>
+                  <div class="col-lg-6 order-1 order-lg-2 text-center">
+                  <img src="${item.image}" alt="${item.title}" class="img-fluid rounded">
+                  </div>
+               </div>
+            </div>
+         `;
+
+         tabContent.innerHTML += html;
+      });
+   })
+   .catch((err) => console.error("Gagal load data lomba:", err));
+
+// FAQ
 fetch(faqJsonUrl)
    .then((response) => response.json())
    .then((data) => {
