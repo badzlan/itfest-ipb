@@ -1,0 +1,34 @@
+[
+   {
+      "question": "Siapa saja yang bisa mengikuti IT Festival 2025?",
+      "answer": "Peserta adalah mahasiswa aktif program D3, D4, atau S1 dari perguruan tinggi di seluruh Indonesia, dibuktikan dengan KTM atau surat keterangan."
+   },
+   {
+      "question": "Apakah satu orang bisa mengikuti lebih dari satu lomba?",
+      "answer": "Tidak, Setiap peserta hanya diperbolehkan mengikuti satu kategori lomba."
+   },
+   {
+      "question": "Apakah satu tim boleh berasal dari jurusan yang berbeda?",
+      "answer": "Boleh, selama seluruh anggota tim berasal dari institusi atau universitas yang sama."
+   },
+   {
+      "question": "Bagaimana cara mendaftar lomba?",
+      "answer": "Pendaftaran dilakukan secara online melalui Google Form yang tersedia, lalu peserta harus memilih kategori lomba. Pastikan mengisi data dengan benar dan melampirkan dokumen yang diminta."
+   },
+   {
+      "question": "Berapa biaya registrasi untuk tiap lomba?",
+      "answer": "Biaya pendaftaran tergantung kategori dan gelombang : • CTF & Software Dev: Rp60.000/tim (Gelombang I), Rp80.000/tim (Gelombang II) • Poster: Rp25.000/orang (Gelombang I), Rp35.000/orang (Gelombang II)"
+   },
+   {
+      "question": "Apakah tahap final dilakukan secara online atau offline?",
+      "answer": "Seluruh finalis dari masing-masing kategori akan diundang untuk mengikuti babak final secara offline di Sekolah Vokasi IPB University."
+   },
+   {
+      "question": "Apakah peserta akan mendapatkan sertifikat?",
+      "answer": "Ya. Seluruh peserta akan memperoleh e-certificate nasional, dan pemenang akan mendapatkan sertifikat khusus serta hadiah menarik."
+   },
+   {
+      "question": "Apakah peserta boleh mengganti anggota tim setelah mendaftar?",
+      "answer": "Pergantian anggota tim tidak diperbolehkan setelah pendaftaran dikonfirmasi dan data peserta dikirimkan. Pastikan anggota tim sudah final sebelum mendaftar."
+   }
+]
