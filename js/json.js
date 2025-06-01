@@ -43,7 +43,7 @@ fetch(faqJsonUrl)
       data.forEach((item, index) => {
          const faqItem = document.createElement("div");
          faqItem.classList.add("faq-item");
-         if (index === 0) faqItem.classList.add("faq-active"); // buka yang pertama
+         if (index === 0) faqItem.classList.add("faq-active");
 
          faqItem.innerHTML = `
             <h3>${item.question}</h3>
