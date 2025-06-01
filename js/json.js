@@ -1,12 +1,13 @@
 const lombaJsonUrl = "data/lomba.json";
 const faqJsonUrl = "data/faq.json";
+const partnerJsonUrl = "data/partner.json";
 
 // Bidang Perlombaan
 fetch(lombaJsonUrl)
    .then((res) => res.json())
    .then((data) => {
       const tabContent = document.querySelector(".tab-content");
-      tabContent.innerHTML = ""; // Kosongkan dulu
+      tabContent.innerHTML = "";
 
       data.forEach((item, index) => {
          const isActive = index === 0 ? "active show" : "";
@@ -52,15 +53,33 @@ fetch(faqJsonUrl)
             <i class="faq-toggle bi bi-chevron-right"></i>
          `;
 
-         faqItem.addEventListener("click", () => {
-            document.querySelectorAll(".faq-item h3, .faq-item .faq-toggle").forEach((faqItem) => {
-               faqItem.addEventListener("click", () => {
-                  faqItem.parentNode.classList.toggle("faq-active");
-               });
-            });
+         faqItem.querySelector(".faq-item h3, .faq-item .faq-toggle").addEventListener("click", () => {
+            faqItem.classList.toggle("faq-active");
          });
 
          faqContainer.appendChild(faqItem);
       });
    })
    .catch((error) => console.error("Gagal memuat FAQ:", error));
+
+// Partner
+fetch(partnerJsonUrl)
+   .then((response) => response.json())
+   .then((data) => {
+      const swiperWrapper = document.querySelector(".swiper-wrapper");
+      swiperWrapper.innerHTML = "";
+
+      data.forEach((partner) => {
+         const slide = document.createElement("div");
+         slide.className = "swiper-slide";
+
+         const img = document.createElement("img");
+         img.src = partner.image;
+         img.alt = "Partner";
+         img.className = "img-fluid";
+
+         slide.appendChild(img);
+         swiperWrapper.appendChild(slide);
+      });
+   })
+   .catch((error) => console.error("Gagal memuat partner.json:", error));
