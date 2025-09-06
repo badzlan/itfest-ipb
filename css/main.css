@@ -22,6 +22,9 @@
   --nav-dropdown-hover-color: #b86dfe;
 }
 
+.text-justify {
+  text-align: justify;
+}
 
 .light-background {
   --background-color: #f3f9ff;
